@@ -1,3 +1,13 @@
-from django.shortcuts import render
+from rest_framework import viewsets, permissions
+from .models import Post, Comment
+from django.contrib.auth.models import User
+from .serializers import PostSerializer, CommentSerializer, UserSerializer
 
-# Create your views here.
+class PostViewSet(viewsets.ModelViewSet):
+    queryset = Post.objects.all().order_by('-created')
+    serializer_class = PostSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+
+    def perform_create(self, serializer):
+        serializer.save(author=self.request.user)
+        
