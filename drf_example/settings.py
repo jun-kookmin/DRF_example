@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken', #토큰 인증
     'drf_spectacular',          #Swagger
     'blog',                     #앱연결
+    'django_filters',           #필터링 연결
 ]
 
 
