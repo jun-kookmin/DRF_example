@@ -9,6 +9,10 @@ class PostViewSet(viewsets.ModelViewSet):
     serializer_class = PostSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly, IsAuthorOrReadOnly]
 
+    filterset_fields =['author__username', 'title'] #'author_username은 장고 ORM에서 자동으로 만들어주는 유저이름
+                                                    # 추가 ORM 제공 : author__email, author__id, comment__post__title
+    ordering_fields =['created_at', 'title']
+
     def perform_create(self, serializer):
         serializer.save(author=self.request.user)
 
