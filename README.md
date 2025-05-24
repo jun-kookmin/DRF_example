@@ -176,7 +176,7 @@ serializer.data     # JSON 반환
 
 - 각 API의 요청/응답 구조를 자동 문서화
 - Swagger UI(`/docs/`)에서 직접 테스트 가능
-
+- [http://localhost:8000/docs/](http://localhost:8000/docs/)
 ---
 
 이 문서는 Django REST Framework의 기능을 구조적으로 학습하고,  
