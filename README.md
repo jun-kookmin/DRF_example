@@ -42,7 +42,7 @@
 ## 설치 및 실행
 
 ```bash
-git clone https://github.com/yourname/drf-example.git
+git clone https://github.com/Xodls128/drf-example.git
 cd drf-example
 
 # 가상환경 설정
