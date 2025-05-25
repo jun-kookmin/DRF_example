@@ -28,3 +28,4 @@ class UserViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
 
+#과제 유저뷰셋 조회 보호
