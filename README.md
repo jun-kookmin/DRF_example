@@ -46,8 +46,8 @@ git clone https://github.com/yourname/drf-example.git
 cd drf-example
 
 # 가상환경 설정
-python -m venv venv
-source venv/bin/activate  # Windows: .\venv\Scripts\activate
+python -m eenv venv
+source env/bin/activate 
 
 # 패키지 설치
 pip install -r requirements.txt
