@@ -1,1 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyc
+*.pyd
+*.pdm.toml
+*.pdm.lock
+
+# Virtual environment
+venv/
+env/
+ENV/
+.venv/
+
+# Django
+*.log
 db.sqlite3
+media/
+staticfiles/
+static/
+*.pot
+*.pyc
+
+# Django migrations (optional, you can keep this if needed)
+**/migrations/
+!**/migrations/__init__.py
+
+# dotenv
+.env
+
+# VS Code
+.vscode/
+
+# Swagger/OpenAPI generated schema
+schema.yml
+schema.json
+schema/
+docs/
+
+# Jupyter notebooks (if any)
+.ipynb_checkpoints/
+
+# OS-specific
+.DS_Store
+Thumbs.db
