@@ -4,6 +4,9 @@ from django.contrib.auth.models import User
 from .serializers import PostSerializer, CommentSerializer, UserSerializer
 from .permissions import IsAuthorOrReadOnly
 
+
+#과제 2: 쓰롤링 뷰 별 적용
+
 class PostViewSet(viewsets.ModelViewSet):
     queryset = Post.objects.all().order_by('-created_at')
     serializer_class = PostSerializer
@@ -28,4 +31,4 @@ class UserViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
 
-#과제 유저뷰셋 조회 보호
+#과제 1: 유저뷰셋 조회 보호
